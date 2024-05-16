@@ -1,1 +1,3 @@
-# Print-It WebSite v.1
+# Print-It 
+
+### Voici le site print-it avec son slider ajouter 
