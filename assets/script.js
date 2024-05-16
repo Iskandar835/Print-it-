@@ -25,12 +25,13 @@ arrowBtn.forEach((button) => {
     const calcNextSlide = e.target.id === "next" ? 1 : -1;
     const sliderImg = document.querySelector(".banner-img");
     const allDots = document.querySelectorAll(".dot");
+    const dotsTable = [...allDots];
     const slideDot = document.querySelector(".dot_selected");
 
-    let indexSituer = calcNextSlide + [...allDots].indexOf(slideDot);
+    let indexSituer = calcNextSlide + dotsTable.indexOf(slideDot);
 
-    if (indexSituer < 0) indexSituer = [...allDots].length - 1;
-    if (indexSituer >= [...allDots].length) indexSituer = 0;
+    if (indexSituer < 0) indexSituer = dotsTable.length - 1;
+    if (indexSituer >= dotsTable.length) indexSituer = 0;
     allDots[indexSituer].classList.add("dot_selected");
     slideDot.classList.remove("dot_selected");
 
